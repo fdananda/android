@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonToastSimplesLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirToastSimplesLong"
+        android:text="Toast Simples Long" />
+
+    <Button
+        android:id="@+id/buttonToastSimplesShort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirToastSimplesShort"
+        android:text="Toast Simples Short" />
+
+    <Button
+        android:id="@+id/buttonToastPersonalizado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirToastPersonalizado"
+        android:text="Toast Personalizado" />
+
+    <Button
+        android:id="@+id/buttonToastComLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="abrirToastComLayout"
+        android:text="Toast Com Layout" />
+
+</LinearLayout>

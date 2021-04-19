@@ -1,4 +1,4 @@
-package com.example.git_sorteio;
+package com.fdananda.git_sorteio;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

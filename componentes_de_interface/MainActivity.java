@@ -1,4 +1,4 @@
-package com.example.git_componentes_de_interface;
+package com.fdananda.git_componentes_de_interface;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

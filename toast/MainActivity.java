@@ -1,4 +1,4 @@
-package com.example.gittoast;
+package com.fdananda.gittoast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

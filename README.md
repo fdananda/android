@@ -5,3 +5,4 @@ Códigos Android
 <li><b>Componentes de interface com listener e clique de botão</b> - (17/04/2021)<br>https://github.com/fdananda/android/tree/main/componentes_de_interface</li>
 <li><b>Sorteio (random) de array de String</b> - (18/04/2021)<br>https://github.com/fdananda/android/tree/main/sorteio_string%5B%5D</li>
 <li><b>Toast simples, personalizado e com layout</b> - (18/04/2021)<br>https://github.com/fdananda/android/tree/main/toast</li>
+<li><b>Alert Dialog simples e personalizado</b> - (19/04/2021)<br>https://github.com/fdananda/android/tree/main/alert_dialog</li>

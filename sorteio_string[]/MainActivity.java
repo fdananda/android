@@ -1,4 +1,4 @@
-package com.example.gitsorteiodelista;
+package com.fdananda.gitsorteiodelista;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

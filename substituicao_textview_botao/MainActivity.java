@@ -1,4 +1,4 @@
-package com.example.git_botao_texto;
+package com.fdananda.git_botao_texto;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

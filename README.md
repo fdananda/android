@@ -7,3 +7,4 @@ Códigos Android
 <li><b>Toast simples, personalizado e com layout</b> - (18/04/2021)<br>https://github.com/fdananda/android/tree/main/toast</li>
 <li><b>Alert Dialog simples e personalizado</b> - (19/04/2021)<br>https://github.com/fdananda/android/tree/main/alert_dialog</li>
 <li><b>ProgressBar Horizontal e Circular</b> - (20/04/2021)<br>https://github.com/fdananda/android/tree/main/progress_bar</li>
+<li><b>SeekBar</b> - (21/04/2021)<br>https://github.com/fdananda/android/tree/main/seekbar</li>

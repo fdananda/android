@@ -11,7 +11,9 @@
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <TextView
         android:id="@+id/textViewTexto"
@@ -29,5 +31,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Recuperar Progresso" />
+
+    <SeekBar
+        android:id="@+id/seekBarDiscrete"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:progress="10" />
+
+    <TextView
+        android:id="@+id/textViewTextoProgressoDiscrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonProgressoDiscrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="recuperarProgressoDiscrete"
+        android:text="Recuperar Progresso Discrete" />
 
 </LinearLayout>

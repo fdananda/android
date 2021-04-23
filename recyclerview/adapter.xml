@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAtributo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextViewAbributo1"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:id="@+id/textViewAtributo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextViewAtributo2" />
+
+            <TextView
+                android:id="@+id/textViewAtributo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextViewAtributo3" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:padding="0dp"
+            app:srcCompat="@android:drawable/ic_search_category_default" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@color/purple_200" />
+
+</LinearLayout>

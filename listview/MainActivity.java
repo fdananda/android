@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private ListView listViewOpcoes;
+
     private String[] opcoes = {
             "Opção 1", "Opção 2", "Opção 3", "Opção 4", "Opção 5",
             "Opção 6", "Opção 7", "Opção 8", "Opção 9", "Opção 10",
@@ -28,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         //Passo 1 - Criar um adaptador
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 getApplicationContext(), //Context
-                android.R.layout.simple_list_item_checked, //Layout que será utilizado
-                android.R.id.text1, //item dentro do layout que será preenchido com a lista
+                R.layout.adapter, //Layout que será utilizado
+                R.id.textViewAtributo1, //item dentro do layout que será preenchido com a lista
                 opcoes //lista
         );
 

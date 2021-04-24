@@ -11,3 +11,4 @@ Códigos Android
 <li><b>ListView com evento de clique</b> - (21/04/2021)<br>https://github.com/fdananda/android/tree/main/listview</li>
 <li><b>ListView customizado com evento de clique</b> - (23/04/2021)<br>https://github.com/fdananda/android/tree/main/listview_customizado</li>
 <li><b>RecyclerView com evento de clique</b> - (23/04/2021)<br>https://github.com/fdananda/android/tree/main/recyclerview</li>
+<li><b>CardView</b> - (24/04/2021)<br>https://github.com/fdananda/android/tree/main/cardview</li>

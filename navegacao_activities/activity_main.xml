@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fundo"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/buttonAbrirActivty2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirActivitySimples"
+            android:text="Abrir Activity Simples" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/purple_500" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fundo"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/editTextAtributoTexto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="Digite um texto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextAtributoNumero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="Digite um número"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/buttonPassagemDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirActivityComDados"
+            android:text="Abrir Activity Com Dados" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/purple_500" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fundo"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/editTextAtributoTextoObjeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="Digite um texto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextAtributoNumeroObjeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:ems="10"
+            android:hint="Digite um número"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/buttonPassagemObjeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="abrirActivityComObjeto"
+            android:text="Abrir Activity Com Objeto" />
+
+    </LinearLayout>
+</LinearLayout>

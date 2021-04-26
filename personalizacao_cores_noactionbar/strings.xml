@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Personalização de Cores e Remoção da Barra Superior</string>
+
+    <string name="titulo1">Personalização de Cores do Projeto</string>
+    <string name="explicacao1">Para	definir uma	cor	de fundo	única	para	todas	as
+        activities	do	projeto. Primeiro, cria-se a cor desejada no arquivo	colors.xml.
+        No nosso exemplo foi criada a cor "cor_fundo_todas". No	arquivo	themes.xml,	cria-se	um
+        novo item com o name android:colorBackground definindo a cor que foi criada.</string>
+
+    <string name="titulo2">Remoção da barra superior</string>
+    <string name="explicacao2">Para	remover	a barra	superior (ActionBar). No arquivo themes.xml,
+        alterar	o parent do	comando	"style_name" para
+        Theme.MaterialComponents.DayNight.NoActionBar.</string>
+</resources>

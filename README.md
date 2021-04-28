@@ -15,3 +15,4 @@ Códigos Android
 <li><b>Navegação entre Activities simples, com passagem de dados e com passagem de objetos</b> - (25/04/2021)<BR>https://github.com/fdananda/android/tree/main/navegacao_activities
 <li><b>Personalização de cores e remoção de ActionBar</b> - (26/04/2021)<br>https://github.com/fdananda/android/tree/main/personalizacao_cores_noactionbar
 <li><b>Fragments</b> - (27/04/2021)<br>https://github.com/fdananda/android/tree/main/fragments
+<li><b>SnackBar</b> - (28/04/2021)<br>https://github.com/fdananda/android/tree/main/snackbar

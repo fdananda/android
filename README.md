@@ -16,3 +16,4 @@ Códigos Android
 <li><b>Personalização de cores e remoção de ActionBar</b> - (26/04/2021)<br>https://github.com/fdananda/android/tree/main/personalizacao_cores_noactionbar
 <li><b>Fragments</b> - (27/04/2021)<br>https://github.com/fdananda/android/tree/main/fragments
 <li><b>SnackBar</b> - (28/04/2021)<br>https://github.com/fdananda/android/tree/main/snackbar
+<li><b>FloatingActionButton</b> - (29/04/2021)<br>https://github.com/fdananda/android/tree/main/floatingactionbutton

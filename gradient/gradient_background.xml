@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#FF3850"
+        android:endColor="@color/white"
+        android:angle="270"
+        android:type= "linear"
+        ></gradient>
+        <!-- O type pode ser dos tipos linear, radial (acompanhando do gradientRadius - android:gradientRadius="300dp"), sweep -->
+</shape>

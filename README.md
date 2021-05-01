@@ -18,3 +18,5 @@ Códigos Android
 <li><b>SnackBar</b> - (28/04/2021)<br>https://github.com/fdananda/android/tree/main/snackbar</li>
 <li><b>FloatingActionButton</b> - (29/04/2021)<br>https://github.com/fdananda/android/tree/main/floatingactionbutton</li>
 <li><b>Navigation Drawer</b> - (30/04/2021)<br>https://github.com/fdananda/android/tree/main/navigation_drawer</li>
+<li><b>Gradient</b> - (01/05/2021)<br>https://github.com/fdananda/android/tree/main/gradient</li>
+<li><b>Intent para abertura de e-mail, imagens, sites e Google Maps</b> - (01/05/2021)<br>https://github.com/fdananda/android/tree/main/intent</li>

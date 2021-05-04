@@ -23,3 +23,4 @@ Códigos Android
 <li><b>MediaPlayer - Áudio</b> - (02/05/2021)<br>https://github.com/fdananda/android/tree/main/mediaplayer_audio</li>
 <li><b>VideoView e Rating</b> - (03/05/2021)<br>https://github.com/fdananda/android/tree/main/videoview_rating</li>
 <li><b>CRUD - SharedPreferences</b> - (04/05/2021)<br>https://github.com/fdananda/android/tree/main/crud_sharedpreferences</li>
+<li><b>CRUD - SharedPreferences - Versão 2</b> - (04/05/2021)<br>https://github.com/fdananda/android/tree/main/crud_sharedpreferences_v2</li>

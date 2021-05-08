@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toast1"
+        android:title="Toast 1"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_search"
+        />
+
+    <!-- Opções do atributo showAsAction:
+    always - opção sempre aparece na Toolbar
+    collapseActionView - opção sempre aparece dentro do menu
+    ifRoom - opção aparece na Toolbar se couber
+    never - opção nunca aparece na Toolbar. É o padrão
+    withText -  opção em que aparece o texto no menu.
+    -->
+
+    <item
+        android:id="@+id/toast2"
+        android:title="Toast 2"
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/toast3"
+        android:title="Toast 3"
+        android:orderInCategory="3"
+        />
+</menu>

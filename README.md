@@ -25,4 +25,5 @@ Códigos Android
 <li><b>CRUD - SharedPreferences</b> - (04/05/2021)<br>https://github.com/fdananda/android/tree/main/crud_sharedpreferences</li>
 <li><b>CRUD - SharedPreferences - Versão 2</b> - (04/05/2021)<br>https://github.com/fdananda/android/tree/main/crud_sharedpreferences_v2</li>
 <li><b>CRUD - SQLite</b> - (07/05/2021)<br>https://github.com/fdananda/android/tree/main/crud_sqllite</li>
+<li><b>CRUD - SQLite com DAO</b> - (10/05/2021)<br>https://github.com/fdananda/android/tree/main/crud_sqllite_dao</li>
 <li><b>Menu</b> - (08/05/2021)<br>https://github.com/fdananda/android/tree/main/menu</li>

@@ -43,6 +43,8 @@
                 android:id="@+id/editTextEmailCadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="7dp"
                 android:ems="10"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress" />
@@ -51,6 +53,8 @@
                 android:id="@+id/editTextSenhaCadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_senha"
+                android:drawablePadding="7dp"
                 android:ems="10"
                 android:hint="Senha"
                 android:inputType="textPassword" />
@@ -77,7 +81,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:background="?android:attr/listDivider" />
+                android:background="@color/design_default_color_primary" />
 
             <TextView
                 android:id="@+id/textViewMenuVerificar"
@@ -118,7 +122,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:background="?android:attr/listDivider" />
+                android:background="@color/design_default_color_primary" />
 
             <TextView
                 android:id="@+id/textViewMenuLogar"
@@ -142,6 +146,8 @@
                 android:id="@+id/editTextEmailLogar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="7dp"
                 android:ems="10"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress" />
@@ -150,6 +156,8 @@
                 android:id="@+id/editTextSenhaLogar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_senha"
+                android:drawablePadding="7dp"
                 android:ems="10"
                 android:hint="Senha"
                 android:inputType="textPassword" />
@@ -176,7 +184,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:background="?android:attr/listDivider" />
+                android:background="@color/design_default_color_primary" />
 
             <TextView
                 android:id="@+id/textViewMenuDeslogar"
@@ -209,7 +217,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:background="?android:attr/listDivider" />
+                android:background="@color/design_default_color_primary" />
 
             <TextView
                 android:id="@+id/textViewMenuExcluir"
@@ -233,6 +241,8 @@
                 android:id="@+id/editTextEmailExcluir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="7dp"
                 android:ems="10"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress" />
@@ -241,6 +251,8 @@
                 android:id="@+id/editTextSenhaExcluir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_senha"
+                android:drawablePadding="7dp"
                 android:ems="10"
                 android:hint="Senha"
                 android:inputType="textPassword" />
@@ -255,6 +267,40 @@
 
             <TextView
                 android:id="@+id/textViewMensagemErroExcluir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_light" />
+
+            <View
+                android:id="@+id/dividerMenu6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <EditText
+                android:id="@+id/editTextEmailEsqueci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="7dp"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <Button
+                android:id="@+id/buttonEsqueci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="recuperarSenha"
+                android:text="Recuperar senha" />
+
+            <TextView
+                android:id="@+id/textViewMensagemErroEsqueci"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

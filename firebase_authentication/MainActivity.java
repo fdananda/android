@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     mensagemErro = "Usuário cadastrado com sucesso!";
                                     textViewMensagemErro.setText(mensagemErro);
+                                    textViewMensagemErro.setTextColor(getResources().getColor(R.color.black));
 
                                     Intent intent = new Intent(getApplicationContext(), UsuarioLogadoActivity.class);
                                     intent.putExtra("email", task.getResult().getUser().getEmail());
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         if(autenticacao.getCurrentUser() != null){
             String mensagemErro = "Usuário logado: " + autenticacao.getCurrentUser().getEmail();
             textViewVerificarLogado.setText(mensagemErro);
+            textViewVerificarLogado.setTextColor(getResources().getColor(R.color.black));
         }else {
             String mensagemErro = "Usuário não está logado!";
             textViewVerificarLogado.setText(mensagemErro);
@@ -151,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             mensagemErro = "Usuário logado com sucesso: " + task.getResult().getUser().getEmail();
                             textViewMensagemErroLogar.setText(mensagemErro);
+                            textViewMensagemErroLogar.setTextColor(getResources().getColor(R.color.black));
 
                             Intent intent = new Intent(getApplicationContext(), UsuarioLogadoActivity.class);
                             intent.putExtra("email", task.getResult().getUser().getEmail());
@@ -210,8 +213,9 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        mensagemErro = "Usuário esxcluído com sucesso!";
+                                        mensagemErro = "Usuário excluído com sucesso!";
                                         textViewMensagemErroExcluir.setText(mensagemErro);
+                                        textViewMensagemErroExcluir.setTextColor(getResources().getColor(R.color.black));
 
                                     }else{
 
@@ -259,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         mensagemErro = "Email enviado com sucesso!";
                         textViewMensagemErroEsqueci.setText(mensagemErro);
+                        textViewMensagemErroEsqueci.setTextColor(getResources().getColor(R.color.black));
                     }
                 }).addOnFailureListener(MainActivity.this, new OnFailureListener() {
                     @Override

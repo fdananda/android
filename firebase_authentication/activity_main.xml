@@ -281,6 +281,24 @@
                 android:layout_marginBottom="10dp"
                 android:background="?android:attr/listDivider" />
 
+            <TextView
+                android:id="@+id/textViewMenuEsqueci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F3F3F3"
+                android:padding="5dp"
+                android:text="Recuperar Senha"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/dividerMenu7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:background="?android:attr/listDivider" />
+
             <EditText
                 android:id="@+id/editTextEmailEsqueci"
                 android:layout_width="match_parent"

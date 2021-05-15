@@ -9,19 +9,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FirebaseAuth autenticacao = FirebaseAuth.getInstance();
-    private EditText editTextEmail, editTextSenha;
+    private EditText editTextEmail, editTextSenha, editTextEsqueciSenha;
     private EditText editTextEmailLogar, editTextSenhaLogar;
     private EditText editTextEmailExcluir, editTextSenhaExcluir;
     private TextView textViewMensagemErro, textViewVerificarLogado,
-            textViewMensagemErroLogar, textViewMensagemErroExcluir;
+            textViewMensagemErroLogar, textViewMensagemErroExcluir,
+            textViewMensagemErroEsqueci;
     String mensagemErro = "";
+    private FirebaseAuth autenticacao = Configuracao.getAutenticacao();
+    private Usuario usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +45,14 @@ public class MainActivity extends AppCompatActivity {
         editTextEmailExcluir = findViewById(R.id.editTextEmailExcluir);
         editTextSenhaExcluir = findViewById(R.id.editTextSenhaExcluir);
 
+        editTextEsqueciSenha = findViewById(R.id.editTextEmailEsqueci);
+
         textViewMensagemErro         = findViewById(R.id.textViewMensagemErroCadastrar);
         textViewMensagemErroLogar    = findViewById(R.id.textViewMensagemErroLogar);
         textViewMensagemErroExcluir  = findViewById(R.id.textViewMensagemErroExcluir);
         textViewVerificarLogado      = findViewById(R.id.textViewVerificarLogado);
+        textViewMensagemErroEsqueci  = findViewById(R.id.textViewMensagemErroEsqueci);
     }
-
 
     public void cadastrarUsuario(View view){
 
@@ -60,8 +70,12 @@ public class MainActivity extends AppCompatActivity {
                 textViewMensagemErro.setText(mensagemErro);
             } else {
 
+                Usuario usuario = new Usuario();
+                usuario.setEmail(email);
+                usuario.setSenha(senha);
+
                 //Cadastrar usuário
-                autenticacao.createUserWithEmailAndPassword(email, senha)
+                autenticacao.createUserWithEmailAndPassword(usuario.getEmail(), usuario.getSenha())
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -77,7 +91,17 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(intent);
 
                                 }else{
-                                    mensagemErro = "Erro ao cadastrar: \n" + task.getException().getMessage().toString();
+                                    try {
+                                        throw  task.getException();
+                                    }catch (FirebaseAuthWeakPasswordException exception){
+                                        mensagemErro = "Erro ao cadastrar: Senha não atende aos padrões de segurança!";
+                                    }catch (FirebaseAuthInvalidCredentialsException exception){
+                                        mensagemErro = "Erro ao cadastrar: E-mail inválido!";
+                                    }catch (FirebaseAuthUserCollisionException exception){
+                                        mensagemErro = "Erro ao cadastrar: E-mail já utilizado!";
+                                    }catch (Exception exception){
+                                        mensagemErro = "Erro ao cadastrar: " + exception.getMessage();
+                                    }
                                     textViewMensagemErro.setText(mensagemErro);
                                 }
                             }
@@ -114,8 +138,12 @@ public class MainActivity extends AppCompatActivity {
                 textViewMensagemErroLogar.setText(mensagemErro);
             } else {
 
+                Usuario usuario = new Usuario();
+                usuario.setEmail(email);
+                usuario.setSenha(senha);
+
                 //Logar usuário
-                autenticacao.signInWithEmailAndPassword(email, senha)
+                autenticacao.signInWithEmailAndPassword(usuario.getEmail(), usuario.getSenha())
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -130,7 +158,16 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
 
                         }else{
-                            mensagemErro = "Erro ao logar: \n" + task.getException().getMessage().toString();
+
+                            try {
+                                throw task.getException();
+                            }catch (FirebaseAuthInvalidCredentialsException exception){
+                                mensagemErro = "Erro ao logar: E-mail inválido!";
+                            }catch (FirebaseAuthInvalidUserException exception){
+                                mensagemErro = "Erro ao logar: Usuário não localizado!";
+                            }catch (Exception exception){
+                                mensagemErro = "Erro ao logar: " + exception.getMessage();
+                            }
                             textViewMensagemErroLogar.setText(mensagemErro);
                         }
                     }
@@ -160,8 +197,12 @@ public class MainActivity extends AppCompatActivity {
                 textViewMensagemErroExcluir.setText(mensagemErro);
             } else {
 
+                Usuario usuario = new Usuario();
+                usuario.setEmail(email);
+                usuario.setSenha(senha);
+
                 //Excluir usuário
-                autenticacao.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                autenticacao.signInWithEmailAndPassword(usuario.getEmail(), usuario.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
@@ -173,6 +214,7 @@ public class MainActivity extends AppCompatActivity {
                                         textViewMensagemErroExcluir.setText(mensagemErro);
 
                                     }else{
+
                                         mensagemErro = "Erro ao excluir usuário!";
                                         textViewMensagemErroExcluir.setText(mensagemErro);
                                     }
@@ -180,12 +222,53 @@ public class MainActivity extends AppCompatActivity {
                             });
 
                         }else{
-                            mensagemErro = "Erro ao excluir usuário";
+                            try {
+                                throw task.getException();
+                            }catch (FirebaseAuthInvalidCredentialsException exception){
+                                mensagemErro = "Erro ao excluir: E-mail inválido!";
+                            }catch (FirebaseAuthInvalidUserException exception){
+                                mensagemErro = "Erro ao excluir: Usuário não localizado!";
+                            }catch (Exception exception){
+                                mensagemErro = "Erro ao excluir: " + exception.getMessage();
+                            }
+
                             textViewMensagemErroExcluir.setText(mensagemErro);
                         }
                     }
                 });
             }
+        }
+    }
+
+    public void recuperarSenha(View view){
+
+        String email = editTextEsqueciSenha.getText().toString();
+
+         if (email.isEmpty() || email == "" || !email.contains("@")) {
+
+                mensagemErro = "Preencha um e-mail válido!";
+                textViewMensagemErroEsqueci.setText(mensagemErro);
+            } else {
+
+                Usuario usuario = new Usuario();
+                usuario.setEmail(email);
+
+                //Logar usuário
+                autenticacao.sendPasswordResetEmail(usuario.getEmail()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        mensagemErro = "Email enviado com sucesso!";
+                        textViewMensagemErroEsqueci.setText(mensagemErro);
+                    }
+                }).addOnFailureListener(MainActivity.this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                        mensagemErro = "Erro ao enviar e-mail: " + e.getMessage();
+                        textViewMensagemErroEsqueci.setText(mensagemErro);
+                    }
+                });
+
         }
     }
 }

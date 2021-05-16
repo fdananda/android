@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTextoCodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3F3F3"
+        android:padding="5dp"
+        android:text="Codificar para a Base 64"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/dividerMenu1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider" />
+
+    <EditText
+        android:id="@+id/editTextTextoCodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_senha"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:hint="Digite o texto para codificar"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/buttonCodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="codificar"
+        android:text="Codificar" />
+
+    <TextView
+        android:id="@+id/textViewRetornoCodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/design_default_color_primary" />
+
+    <TextView
+        android:id="@+id/textViewTextoDecodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3F3F3"
+        android:padding="5dp"
+        android:text="Decodificar da Base 64"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/dividerMenu2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider" />
+
+    <EditText
+        android:id="@+id/editTextTextoDecodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_decodificar"
+        android:drawablePadding="7dp"
+        android:ems="10"
+        android:hint="Digite o texto para decodificar"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/buttonDecodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="decodificar"
+        android:text="Decodificar" />
+
+    <TextView
+        android:id="@+id/textViewRetornoDecodificar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center" />
+</LinearLayout>

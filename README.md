@@ -30,3 +30,4 @@ Códigos Android
 <li><b>Firebase Authentication</b> - (11/05/2021)<br>https://github.com/fdananda/android/tree/main/firebase_authentication</li>
 <li><b>EditText Customizados</b> - (14/05/2021)<br>https://github.com/fdananda/android/tree/main/edittext_customizados</li>
 <li><b>Tema Customizado</b> - (16/05/2021)<br>https://github.com/fdananda/android/tree/main/tema_customizado</li>
+<li><b>Data Atual</b> - (16/05/2021)<br>https://github.com/fdananda/android/tree/main/data_atual</li>

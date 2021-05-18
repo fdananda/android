@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumeroDigitado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite um número decimal"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewLegenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="O número digitado será somado a Pi (3.14159265359)" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/buttonSomar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="somarFormatar"
+        android:text="Somar e formatar" />
+</LinearLayout>

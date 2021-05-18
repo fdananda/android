@@ -31,3 +31,4 @@ Códigos Android
 <li><b>EditText Customizados</b> - (14/05/2021)<br>https://github.com/fdananda/android/tree/main/edittext_customizados</li>
 <li><b>Tema Customizado</b> - (16/05/2021)<br>https://github.com/fdananda/android/tree/main/tema_customizado</li>
 <li><b>Data Atual</b> - (16/05/2021)<br>https://github.com/fdananda/android/tree/main/data_atual</li>
+<li><b>Toolbar</b> - (18/05/2021)<br>https://github.com/fdananda/android/tree/main/toolbar</li>

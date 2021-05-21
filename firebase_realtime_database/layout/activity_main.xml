@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewidUsuarioLogado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/browser_actions_bg_grey"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/editTextAtributo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Atributo 1"
+        android:inputType="textPersonName"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editTextAtributo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Atributo 2"
+        android:inputType="textPersonName"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editTextAtributo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Atributo 3"
+        android:inputType="textPersonName"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonGravarDados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="salvar"
+        android:text="Gravar Dados" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <ListView
+        android:id="@+id/listViewRecuperar"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" />
+
+    <Button
+        android:id="@+id/buttonLerDados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recuperar dados"
+        android:onClick="ler"
+        />
+
+    <EditText
+        android:id="@+id/editTextPesquisar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/ic_search_category_default"
+        android:ems="10"
+        android:hint="Pesquisar"
+        android:inputType="textPersonName"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/buttonPesquisar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pesquisar"
+        android:text="Buscar"
+        android:visibility="invisible"/>
+
+</LinearLayout>

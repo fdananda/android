@@ -17,6 +17,11 @@ public class ToolbarPersonalizadaActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarPersonalizada);
         toolbar.setTitle("Toolbar 2 Personalizada");
         setSupportActionBar(toolbar);
+
+        //Para que o botão voltar funcione é necessário definir no AndroidManifest.xml de quem a
+        //activity atual é filha através do comando:
+        //android:parentActivityName=".MainActivity"
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

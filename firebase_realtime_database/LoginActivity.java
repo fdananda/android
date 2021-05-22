@@ -13,6 +13,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView textViewMensagemErroLogar;
     String mensagemErro = "";
     private FirebaseAuth autenticacao = Configuracao.getAutenticacao();
+    private FirebaseUser firebaseUser = autenticacao.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,15 @@ public class LoginActivity extends AppCompatActivity {
         editTextEmailLogar = findViewById(R.id.editTextEmailLogar);
         editTextSenhaLogar = findViewById(R.id.editTextSenhaLogar);
         textViewMensagemErroLogar = findViewById(R.id.textViewMensagemErroLogar);
+
+        if(firebaseUser != null){
+
+            String email = firebaseUser.getEmail();
+            String uid = firebaseUser.getUid();
+
+            abrirNovaPagina(email, uid);
+        }
+
     }
 
     public void logarUsuario(View view){
@@ -70,10 +81,10 @@ public class LoginActivity extends AppCompatActivity {
                                     textViewMensagemErroLogar.setText(mensagemErro);
                                     textViewMensagemErroLogar.setTextColor(getResources().getColor(R.color.black));
 
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    intent.putExtra("email", task.getResult().getUser().getEmail());
-                                    intent.putExtra("uid", task.getResult().getUser().getUid());
-                                    startActivity(intent);
+                                    String emailTask = task.getResult().getUser().getEmail();
+                                    String uidTask = task.getResult().getUser().getUid();
+
+                                    abrirNovaPagina(emailTask, uidTask);
 
                                 } else {
 
@@ -95,4 +106,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    public void abrirNovaPagina(String email, String uid){
+
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("email", email);
+        intent.putExtra("uid", uid);
+        startActivity(intent);
+    }
 }

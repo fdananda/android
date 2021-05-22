@@ -11,6 +11,7 @@
         android:theme="@style/Theme.GitToolbar">
         <activity android:name=".ToolbarPersonalizadaActivity"
             android:theme="@style/Theme.GitToolbar.NoActionBar"
+            android:parentActivityName=".MainActivity"
             ></activity>
         <activity
             android:name=".MainActivity"

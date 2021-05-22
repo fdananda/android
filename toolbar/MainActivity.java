@@ -1,5 +1,6 @@
 package com.fdananda.gittoolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.toast3:
                 textViewOpcaoSelecionada.setText("Selecionada a opção Toast 3");
                 Toast.makeText(this, "Selecionada a opção Toast 3", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.activityToolbar2:
+                Intent intent = new Intent(this, ToolbarPersonalizadaActivity.class);
+                startActivity(intent);
                 break;
             case R.id.sair:
                 finish();

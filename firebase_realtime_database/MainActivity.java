@@ -67,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     atributo.setAtributo2(atributo2);
                     atributo.setAtributo3(atributo3);
 
-                    //Ao usar o push() no lugar do child(), é gerado um identificador único ao salvar
-                    atributosRef.push().setValue(atributo);
+                    atributo.salvar();
 
                     editTextAtributo1.setText("");
                     editTextAtributo2.setText("");
@@ -122,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
                                         atributoSelecionado = new Atributo();
                                         atributoSelecionado = (Atributo) parent.getAdapter().getItem(position);
 
-                                        DatabaseReference atributosRefSelecionado = Configuracao.getDatabase().child(atributoSelecionado.getIdentificador());
-                                        atributosRefSelecionado.removeValue();
+                                        atributoSelecionado.excluir();
                                         adapter.notifyDataSetChanged();
 
                                         Toast.makeText(MainActivity.this, "Registro excluído com sucesso!", Toast.LENGTH_SHORT).show();

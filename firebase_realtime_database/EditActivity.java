@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.google.firebase.database.DatabaseReference;
 
 public class EditarActivity extends AppCompatActivity {
 
@@ -52,11 +51,7 @@ public class EditarActivity extends AppCompatActivity {
                         atributo.setAtributo2(atributo2);
                         atributo.setAtributo3(atributo3);
 
-                        DatabaseReference atributosRefAlterar = Configuracao.getDatabase().child(atributo.getIdentificador());
-
-                        atributosRefAlterar.child("atributo1").setValue(atributo1);
-                        atributosRefAlterar.child("atributo2").setValue(atributo2);
-                        atributosRefAlterar.child("atributo3").setValue(atributo3);
+                        atributo.editar();
 
                         Toast.makeText(this, "Dados alterados com sucesso!", Toast.LENGTH_SHORT).show();
 

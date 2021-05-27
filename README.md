@@ -36,3 +36,4 @@ Códigos Android
 <li><b>Swipe</b> - (20/05/2021)<br>https://github.com/fdananda/android/tree/main/swipe</li>
 <li><b>MVVM</b> - (25/05/2021)<br>https://github.com/fdananda/android/tree/main/mvvm</li>
 <li><b>Threads</b> - (26/05/2021)<br>https://github.com/fdananda/android/tree/main/threads</li>
+<li><b>AsyncTask</b> - (26/05/2021)<br>https://github.com/fdananda/android/tree/main/asynctask</li>

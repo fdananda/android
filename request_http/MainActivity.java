@@ -3,6 +3,7 @@ package com.fdananda.gitrequesthttp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import org.json.JSONException;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Conectar
                 HttpURLConnection httpURLConnection = (HttpURLConnection) urlApi.openConnection();
+                Log.i("codigo retorno:", "Código Retorno da conexão: " + httpURLConnection.getResponseCode());
 
                 //Retorno em bytes
                 inputStream = httpURLConnection.getInputStream();
@@ -117,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
                     objetoTexto = jsonObject.getString("content");
                     JSONObject jsonObjectTexto = new JSONObject(objetoTexto);
-                    texto       = jsonObjectTexto.getString("rendered");
+                    texto       = jsonObjectTexto.getString("rendered").replaceAll("<p>|<strong>|</p>|</strong>|<img class...>", "");
 
                     textoFormatado = "ID: " + String.valueOf(id) + "\n\nTítulo: " + titulo + "\n\nData: " + data +
                             "\n\nLink: " + link + "\n\nTexto: " + texto;

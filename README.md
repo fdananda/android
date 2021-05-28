@@ -37,3 +37,4 @@ Códigos Android
 <li><b>MVVM</b> - (25/05/2021)<br>https://github.com/fdananda/android/tree/main/mvvm</li>
 <li><b>Threads</b> - (26/05/2021)<br>https://github.com/fdananda/android/tree/main/threads</li>
 <li><b>AsyncTask</b> - (26/05/2021)<br>https://github.com/fdananda/android/tree/main/asynctask</li>
+<li><b>Request HTTP</b> - (27/05/2021)<br>https://github.com/fdananda/android/tree/main/request_http</li>

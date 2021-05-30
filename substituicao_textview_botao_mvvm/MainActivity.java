@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView texto;
-    private EditText novoTexto;
+    private TextView texto, texto2;
+    private EditText novoTexto, novoTexto2;
     private Button buttonSubstituir;
     private MainActivityVM mainActivityVM;
 
@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         texto       = findViewById(R.id.textViewTexto);
+        texto2       = findViewById(R.id.textViewTexto2);
         novoTexto   = findViewById(R.id.editTextNovoTexto);
+        novoTexto2   = findViewById(R.id.editTextNovoTexto2);
         buttonSubstituir = findViewById(R.id.buttonSubstituirTexto);
         mainActivityVM = new ViewModelProvider(this).get(MainActivityVM.class);
 
@@ -33,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ativarBotao(){
+        novoTexto.addTextChangedListener(MaskUtil.insert(novoTexto));
         novoTexto.addTextChangedListener(habilitarBotao);
+        novoTexto2.addTextChangedListener(habilitarBotao);
         mainActivityVM.ativarBotao().observe(this, new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean aBoolean) {
@@ -50,7 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            mainActivityVM.contarTexto(s.toString());
+            String texto1 = novoTexto.getText().toString();
+            String texto2 = novoTexto2.getText().toString();
+
+            if (!texto1.isEmpty() && !texto2.isEmpty()){
+                mainActivityVM.contarTexto(texto1, texto2);
+            }
         }
 
         @Override
@@ -59,20 +68,28 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     public void substituirTexto(View view){
         
-        String textoRecuperado = novoTexto.getText().toString(); 
+        String textoRecuperado = novoTexto.getText().toString();
 
         if(textoRecuperado == null || textoRecuperado.isEmpty() || textoRecuperado == ""){
             Toast.makeText(this, "Preencha o campo!", Toast.LENGTH_SHORT).show();
 
         }else{
-            mainActivityVM.enviarTexto(novoTexto.getText().toString());
+            mainActivityVM.enviarTexto(novoTexto.getText().toString(), novoTexto2.getText().toString());
 
             mainActivityVM.retornarTexto().observe(this, new Observer<String>() {
                 @Override
                 public void onChanged(String s) {
                     texto.setText(s);
+                }
+            });
+
+            mainActivityVM.retornarTexto2().observe(this, new Observer<String>() {
+                @Override
+                public void onChanged(String s) {
+                    texto2.setText(s);
                 }
             });
         }

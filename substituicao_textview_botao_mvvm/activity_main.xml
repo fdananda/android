@@ -14,7 +14,17 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingBottom="16dp"
-        android:text="[Texto que será substituído]"
+        android:text="[Texto do CPF]"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewTexto2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="[Texto 2 que será substituído]"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -23,8 +33,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Digite o novo texto aqui"
-        android:inputType="textPersonName"
+        android:hint="Digite o CPF"
+        android:inputType="number"
+        android:maxLength="14"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editTextNovoTexto2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite o novo texto 2 aqui"
+        android:inputType="number"
         android:paddingBottom="16dp" />
 
     <Button

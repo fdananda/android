@@ -19,16 +19,19 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextAtributo1, editTextAtributo2, editTextAtributo3;
+    private EditText editTextAtributo1, editTextAtributo2, editTextAtributo3, editTextPesquisar;
     private TextView textViewDadosUsuarioLogado;
     private ListView listViewAtributos;
     private Atributo atributoSelecionado;
     DatabaseReference atributosRef = Configuracao.getDatabase();
     private ValueEventListener valueEventListenerAtributo;
     private Button buttonRecuperar;
+    ArrayList<Atributo> atributos = new ArrayList<Atributo>();
+    ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         editTextAtributo1 = findViewById(R.id.editTextAtributo1);
         editTextAtributo2 = findViewById(R.id.editTextAtributo2);
         editTextAtributo3 = findViewById(R.id.editTextAtributo3);
+        editTextPesquisar = findViewById(R.id.editTextPesquisar);
         buttonRecuperar   = findViewById(R.id.buttonLerDados);
 
         Bundle dadosRecebidos = getIntent().getExtras();
@@ -83,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
         listViewAtributos  = findViewById(R.id.listViewRecuperar);
 
-        ArrayList<Atributo> atributos = new ArrayList<Atributo>();
-
         valueEventListenerAtributo = atributosRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     atributos.add(atributo);
                 }
 
-                ArrayAdapter adapter = new AdapterCustomizado(getApplicationContext(), atributos);
+                adapter = new AdapterCustomizado(getApplicationContext(), atributos);
                 listViewAtributos.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
 
@@ -163,6 +165,28 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void pesquisar(View view){
+
+        String termoBusca = editTextPesquisar.getText().toString().toLowerCase();
+
+        List<Atributo> listaAtributosPesquisa = new ArrayList<>();
+
+        for (Atributo atributo : atributos){
+
+            String atributo1 = atributo.getAtributo1().toLowerCase();
+            String atributo2 = atributo.getAtributo2().toLowerCase();
+            String atributo3 = atributo.getAtributo3().toLowerCase();
+
+            if (atributo1.contains(termoBusca) || atributo2.contains(termoBusca) || atributo3.contains(termoBusca)){
+                listaAtributosPesquisa.add(atributo);
+            }
+        }
+        adapter = new AdapterCustomizado(getApplicationContext(), (ArrayList<Atributo>) listaAtributosPesquisa);
+        listViewAtributos.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
     }
 
     @Override

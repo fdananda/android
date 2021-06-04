@@ -38,3 +38,4 @@ public class AdapterCustomizado extends ArrayAdapter<Atributo> {
         return viewPersonalizada;
     }
 }
+

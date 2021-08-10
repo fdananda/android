@@ -41,3 +41,4 @@ Códigos Android
 <li><b>Substituição de TextView com clique de botão em MVVM</b> - (29/05/2021)<br>https://github.com/fdananda/android/tree/main/substituicao_textview_botao_mvvm</li>
 <li><b>Shape Rectangle</b> - (31/05/2021)<br>https://github.com/fdananda/android/tree/main/shape_rectangle</li>
 <li><b>EditText Arredondado</b> - (21/06/2021)<br>https://github.com/fdananda/android/tree/main/edittext_arredondado</li>
+<li><b>TextWatcher</b> - (10/08/2021)<br>https://github.com/fdananda/android/tree/main/textwatcher</li>

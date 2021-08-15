@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+import com.fdananda.gitalertdialog.util.DialogGeneric;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button botaoAlertDialog;
+    private DialogGeneric dialogGeneric;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,5 +100,19 @@ public class MainActivity extends AppCompatActivity {
                 });
         alertDialog.create();
         alertDialog.show();
+    }
+
+    public void openGenericDialog(View view){
+        dialogGeneric = new DialogGeneric();
+        dialogGeneric.OpenDialog(this, getResources().getDrawable(R.drawable.ic_generic),
+                "Título do Alerta",
+                "Texto que irá aparecer como mensagem do alerta. Pode ser multilinhas. " +
+                        "O ideal é que não seja muito grande. Entendeu?!",
+                "Claro :-)",
+                MainActivity.class,
+                "Xii... :-(",
+                MainActivity.class,
+                "Talvez",
+                getResources().getColor(R.color.black));
     }
 }

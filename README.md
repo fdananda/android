@@ -47,3 +47,4 @@ Códigos Android
 <li><b>Radio Button (com  MVVM)</b> - (18/08/2021)<br>https://github.com/fdananda/android/tree/main/radiobutton</li>
 <li><b>MVVM</b> - (18/08/2021)<br>https://github.com/fdananda/android/tree/main/mvvm3</li>
 <li><b>onActivityResult</b> - (18/08/2021)<br>https://github.com/fdananda/android/tree/main/onactivityresult</li>
+<li><b>CardView (imagem arredondada)</b> - (20/08/2021)<br>https://github.com/fdananda/android/tree/main/cardview2</li>

@@ -50,7 +50,7 @@ Códigos Android
 <li><b>CardView (imagem arredondada)</b> - (20/08/2021)<br>https://github.com/fdananda/android/tree/main/cardview2</li>
 <li><b>WebView</b> - (20/08/2021)<br>https://github.com/fdananda/android/tree/main/webview</li>
 <li><b>ROOM Database</b> - (27/08/2021)<br>https://github.com/fdananda/RoomDatabase</li>
-<li><b>Data Binding</b> - (27/08/2021)<br>https://github.com/fdananda/java-databinding</li>
+<li><b>Data Binding</b> - (27/08/2021)<br>https://github.com/fdananda/java-databinding</li><br><p>
 
-<p>Links importantes</p>
+<b>Links importantes</b>
 <li><a href=https://material.io/resources/color/#!/?view.left=0&view.right=0>Color Tool (Material Design)</a></li>

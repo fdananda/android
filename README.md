@@ -57,3 +57,4 @@ Códigos Android
 <li><a href=https://developer.android.com/courses/android-basics-kotlin/course>Curso Android Basics in Kotlin</a></li>
 <li><a href=https://developer.android.com/codelabs/basic-android-kotlin-training-change-app-icon?hl=pt&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-2-pathway-2%3Fhl%3Dpt%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-change-app-icon#5>Alterar ícone do app</a></li>
 <li><a href=https://material.io/components?platform=android>Componentes do Material Design</a></li>
+<li><a href=https://developer.android.com/codelabs/basic-android-kotlin-training-polished-user-experience?hl=pt&continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-kotlin-unit-2-pathway-2%3Fhl%3Dpt%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-training-polished-user-experience#3>Incluir ícones</a></li>

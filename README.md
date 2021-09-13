@@ -51,8 +51,10 @@ Códigos Android
 <li><b>WebView</b> - (20/08/2021)<br>https://github.com/fdananda/android/tree/main/webview</li>
 <li><b>ROOM Database</b> - (27/08/2021)<br>https://github.com/fdananda/RoomDatabase</li>
 <li><b>Data Binding</b> - (27/08/2021)<br>https://github.com/fdananda/java-databinding</li>
-<li><b>Navigation Component</b> - (10/09/2021)<br>https://github.com/fdananda/navigation_component</li><br><p>
-<li><b>Material Design EditText</b> - (13/09/2021)<br>https://github.com/fdananda/android/tree/main/material_design_edittext</li><br><p>
+<li><b>Navigation Component</b> - (10/09/2021)<br>https://github.com/fdananda/navigation_component</li>
+<li><b>Material Design EditText</b> - (13/09/2021)<br>https://github.com/fdananda/android/tree/main/material_design_edittext</li>
+
+<br><p>
 
 <b>Links importantes</b>
 <li><a href=https://material.io/resources/color/#!/?view.left=0&view.right=0>Color Tool (Material Design)</a></li>

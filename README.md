@@ -53,8 +53,9 @@ Códigos Android
 <li><b>Data Binding</b> - (27/08/2021)<br>https://github.com/fdananda/java-databinding</li>
 <li><b>Navigation Component</b> - (10/09/2021)<br>https://github.com/fdananda/navigation_component</li>
 <li><b>Material Design EditText</b> - (13/09/2021)<br>https://github.com/fdananda/android/tree/main/material_design_edittext</li>
-<li><b>Life Cycle </b> - (06/08/2022)<br>https://github.com/fdananda/android/blob/main/lifecycle/MainActivity.java</li>
-<li><b>Dark Theme( 06/08/2022)<br>https://github.com/fdananda/android/tree/main/dark_theme</li>
+<li><b>Life Cycle </b> - (05/08/2022)<br>https://github.com/fdananda/android/blob/main/lifecycle/MainActivity.java</li>
+<li><b>Dark Theme - (05/08/2022)<br>https://github.com/fdananda/android/tree/main/dark_theme</li>
+<li><b>Progress Dialog - (06/08/2022)<br>https://github.com/fdananda/android/tree/main/progress_dialog</li>
 
 <br><p>
 

@@ -56,6 +56,7 @@ Códigos Android
 <li><b>Life Cycle </b> - (05/08/2022)<br>https://github.com/fdananda/android/blob/main/lifecycle/MainActivity.java</li>
 <li><b>Dark Theme - (05/08/2022)<br>https://github.com/fdananda/android/tree/main/dark_theme</li>
 <li><b>Progress Dialog - (06/08/2022)<br>https://github.com/fdananda/android/tree/main/progress_dialog</li>
+<li><b>Using Intents (navegação entre activities) - (06/08/2022)<br>https://github.com/fdananda/android/tree/main/using_intents</li>
 
 <br><p>
 
